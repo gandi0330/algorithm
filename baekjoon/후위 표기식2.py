@@ -5,7 +5,7 @@ n = int(sys.stdin.readline())
 strs = input()
 
 dict_ = {i : int(sys.stdin.readline())  for i in sorted(filter(lambda x : x.isalpha(), set(strs))) }
-print(dict_)
+
 
 stack_ = []
 

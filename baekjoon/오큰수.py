@@ -7,7 +7,7 @@
 #             if num_list[i] < num_list[j]:
 #                 answer+= str(num_list[j]) + ' '
 #                 break
-#         # 반복문을 정상적으로 통과(오큰4수를 찾지 못함)하면 오큰수에 -1 저장
+#         # 반복문을 정상적으로 통과(오큰수를 찾지 못함)하면 오큰수에 -1 저장
 #         else :
 #             answer += '-1 ' 
     

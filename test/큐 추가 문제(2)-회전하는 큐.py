@@ -15,7 +15,7 @@ for num in pick_list :
         distance = len(que_) - distance
     
     min_distance_count += distance
-    que_.remove(que_[new_idx])
+    del que_[new_idx]
     now_idx = new_idx
 
 print(min_distance_count)

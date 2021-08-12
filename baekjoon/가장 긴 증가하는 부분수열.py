@@ -1,32 +1,20 @@
-_ = input()
+# LIS 문제라고도 부른다 Longest Increase Subsequence
+# 해결 방법 
+# 1. DP
+# 2. 완전탐색
+# 3. 이진탐색
 
+# DP 풀이
+
+n = int(input())
 num_list = list(map(int,input().split()))
 
+dp = [1] * n
+
+for i in range(1, n):
+    for j in range(i):
+        if num_list[i] >num_list[j]:
+            dp[i] = max(dp[j]+1, dp[i])
 
 
-
-start_idx = 0
-while True:
-    min_num = num_list[start_idx]
-    length = 1
-
-    sub_list = []
-    length_list = []
-    for i in range(1,len(num_list[start_idx+1:])):
-
-        if num_list[i] > min_num:
-            length += 1
-            min_num = num_list[i]
-        
-        if num_list[start_idx] > num_list[i]:
-            sub_list.append(i)
-
-        
-    length_list.append(length)
-
-    if sub_list :
-        start_idx = sub_list[0]
-    else :
-        break
-
-print(max(length_list))
+print(dp[n-1])

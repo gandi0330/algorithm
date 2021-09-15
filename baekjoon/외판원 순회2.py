@@ -9,10 +9,11 @@ n = int(input())
 
 matrix = [list(map(int,input().split())) for _ in range(n)]
 answer = 10000000
-for i in permutations(range(1,n+1),n):
+for i in permutations(range(1,n),n-1):
     num_list = [*i]
-    num_list.append(num_list[0])
+    num_list = [0] + num_list + [0]
 
+    print(num_list)
     sub = 0
     for j in range(n) :
         cost = matrix[num_list[j]-1][num_list[j+1]-1]

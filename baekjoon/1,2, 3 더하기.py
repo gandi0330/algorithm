@@ -15,6 +15,7 @@ for _ in range(t):
         if d[i] == 0 :
             d[i] = d[i-1]+d[i-2]+d[i-3]
     
+    
     print(d[n-1])
 
 

@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/17404
+# 난이도 : gold 4
+
 import sys
 
 n = int(input())
@@ -27,7 +30,6 @@ for color in range(3):
         if i == color : continue
         min_val = min(dp[n-1][i], min_val)
 
-    print(dp)
-    
+   
 
 print(min_val)

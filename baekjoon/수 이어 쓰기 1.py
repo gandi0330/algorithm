@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/1748
+# 난이도 : silver 3
+
 import math
 
 n = int(input())
@@ -11,3 +14,5 @@ for i in range(0,l-1):
 answer += (n - (10**(l-1)) + 1) * l
 
 print(answer)
+
+

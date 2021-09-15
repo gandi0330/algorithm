@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/14500
+# 난이도 : gold 5
+
 import sys
 
 n,m = map(int,sys.stdin.readline().split())
@@ -8,13 +11,11 @@ answer = 0
 def p1():
     global matrix, answer
 
-    for _ in range(2):
-        for i in range(len(matrix)-3):
-            for j in range(len(matrix[0])):
-                sub = matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i+3][j]
-                if answer < sub:
-                    answer = sub
-        rotate_90()
+    for i in range(len(matrix)-3):
+        for j in range(len(matrix[0])):
+            sub = matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i+3][j]
+            if answer < sub:
+                answer = sub
     
 
 
@@ -30,40 +31,29 @@ def p2():
 def p3():
     global matrix, answer
 
-    for _ in range(2):
-        for _ in range(4):
-            for i in range(len(matrix)-2):
-                for j in range(len(matrix[0])-1):
-                    sub = matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i][j+1]
-                    if answer < sub:
-                        answer = sub
-        rotate_90()
-    reverse_l_r()
-
+    for i in range(len(matrix)-2):
+        for j in range(len(matrix[0])-1):
+            sub = matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i][j+1]
+            if answer < sub:
+                answer = sub
 
 def p4():
     global matrix, answer
 
-    for _ in range(2):
-        for _ in range(4):
-            for i in range(len(matrix)-2):
-                for j in range(len(matrix[0])-1):
-                    sub = matrix[i][j] + matrix[i+1][j] + matrix[i+1][j+1] + matrix[i+2][j+1]
-                    if answer < sub:
-                        answer = sub
-        rotate_90()
-    reverse_l_r()
+    for i in range(len(matrix)-2):
+        for j in range(len(matrix[0])-1):
+            sub = matrix[i][j] + matrix[i+1][j] + matrix[i+1][j+1] + matrix[i+2][j+1]
+            if answer < sub:
+                answer = sub
 
 def p5():
     global matrix, answer
 
-    for _ in range(4):
-        for i in range(len(matrix)-1):
-            for j in range(len(matrix[0])-2):
-                sub = matrix[i][j] + matrix[i][j+1] + matrix[i+1][j+1] + matrix[i][j+2]
-                if answer < sub:
-                    answer = sub
-        rotate_90()
+    for i in range(len(matrix)-1):
+        for j in range(len(matrix[0])-2):
+            sub = matrix[i][j] + matrix[i][j+1] + matrix[i+1][j+1] + matrix[i][j+2]
+            if answer < sub:
+                answer = sub
 
 def rotate_90():
     global matrix
@@ -85,10 +75,27 @@ def reverse_l_r():
 
     matrix = ref
 
-p1()
+
+for _ in range(2):
+    p1()
+    rotate_90()
+
 p2()
-p3()
-p4()
-p5()
+
+for _ in range(2):
+    for _ in range(4):
+        p3()
+        rotate_90()
+    reverse_l_r()
+
+for _ in range(2):
+    for _ in range(4):
+        p4()
+        rotate_90()
+    reverse_l_r()
+
+for _ in range(4):
+    p5()
+    rotate_90()
 
 print(answer)

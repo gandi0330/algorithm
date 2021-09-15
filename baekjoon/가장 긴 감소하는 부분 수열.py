@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/11722
+# 난이도 : silver 2
+
 n = int(input())
 num_list = list(map(int,input().split()))
 

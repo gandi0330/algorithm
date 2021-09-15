@@ -4,7 +4,7 @@
 n = int(input())
 num_list = list(map(int,input().split()))
 
-dp = [0]* n
+dp = [0] * n
 
 
 for i in range(n):

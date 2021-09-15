@@ -1,8 +1,4 @@
 # LIS 문제라고도 부른다 Longest Increase Subsequence
-# 해결 방법 
-# 1. DP
-# 2. 완전탐색
-# 3. 이진탐색
 
 # DP 풀이
 
@@ -17,4 +13,4 @@ for i in range(1, n):
             dp[i] = max(dp[j]+1, dp[i])
 
 
-print(dp[n-1])
+print(max(dp))

@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/1932
+# 난이도 : silver 1
+
 import sys
 n = int(input())
 

@@ -14,7 +14,6 @@ n = int(sys.stdin.readline())
 for _ in range(n):
     num_list = list(map(int,sys.stdin.readline().split()))[1:]
 
-
     gcd_sum = 0
     for i in range(len(num_list) - 1):
         for j in range(i+1, len(num_list)):

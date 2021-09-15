@@ -7,9 +7,4 @@ for i in range(2, n+1):
         if d[i] > d[i - j*j]  :
             d[i] =  d[i - j*j] + 1
         
-print(d[n])
-
-
-
-
-# 큰 수부터 해도 안됨"
+print(d[n]) 

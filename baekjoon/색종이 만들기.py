@@ -2,7 +2,7 @@ import sys
 
 def dc (num_list):
     global white, blue
-    print(num_list)
+    
     if len(num_list) == 1:
         if num_list[0] ==[0] :
             white+=1
@@ -32,7 +32,7 @@ def dc (num_list):
     num_list2 = []
     num_list3 = []
     num_list4 = []
-    
+
     for i in range(0,l):
         num_list1.append(num_list[i][:l])
         num_list2.append(num_list[i][l:])

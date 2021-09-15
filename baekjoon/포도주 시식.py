@@ -1,8 +1,9 @@
+# url : https://www.acmicpc.net/problem/2156
+# 난이도 : silver 1
+
 import sys
 
 n = int(input())
-
-
 
 dp = [0] * 10001
 

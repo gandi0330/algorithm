@@ -13,6 +13,8 @@ def era(max_num):
     return era_list
 
 num_list = []
+
+
 while True:
     n = int(sys.stdin.readline())
     if n == 0 :
@@ -22,10 +24,12 @@ while True:
 
 era_list = era(max(num_list))
 
+
 for n in num_list :
     for i in range(3, n//2+1, 2):
         if era_list[i] and era_list[n-i] :
             print(f'{n} = {i} + {n-i}')
+
             break
     else :
         print('Goldbach\'s conjecture is wrong')

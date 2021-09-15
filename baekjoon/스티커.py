@@ -1,3 +1,7 @@
+# url : https://www.acmicpc.net/problem/9465
+# 난이도 : silver 2
+
+
 import sys
 
 t  = int(input())

@@ -1,3 +1,5 @@
+# 링크 https://www.acmicpc.net/problem/11399
+
 _ = input()
 
 num_list = sorted(map(int,input().split()))

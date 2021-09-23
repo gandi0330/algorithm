@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/6603
+# 난이도 : silver 2
+
 from itertools import combinations
 import sys
 input = sys.stdin.readline

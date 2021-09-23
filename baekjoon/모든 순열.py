@@ -1,3 +1,6 @@
+# url : https://www.acmicpc.net/problem/10974
+# 난이도 : silver 3
+
 from itertools import permutations
 
 n = int(input())

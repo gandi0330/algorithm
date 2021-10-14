@@ -1,6 +1,3 @@
-# url : https://www.acmicpc.net/problem/16198
-# 난이도 : silver 1
-
 n = int(input())
 
 energy_w = list(map(int,input().split()))
